@@ -10,8 +10,10 @@ Overview
 a basic blog engine, whty ? just wanted to test my knoledge of building a well put together project.
 
 Installation
-1. Clone the repository
-2. Install dependencies: `npm install`
+1. in the `.env` add your mongodb URI example (MONGODB_URI=mongodb+srv://<username>:<password>@clusterName.xxxxxxx.mongodb.net/blog
+JWT_SECRET=MySecretBlog)
+2. Clone the repository
+3. Install dependencies: `npm install`
 
 Usage
 Start the server: `nodemon app`
