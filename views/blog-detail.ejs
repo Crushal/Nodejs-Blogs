@@ -1,0 +1,10 @@
+<h1><%= blog.title %></h1>
+<article class="article">
+    <h4> <%= blog.body %> </h4>
+    <p class="article-date">
+        <div class="date-info">
+            Created At : <%= blog.createdAt.toDateString() %>
+            Updated At : <%= blog.updatedAt.toDateString() %>
+        </div>
+    </p>
+</article>

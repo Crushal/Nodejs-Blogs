@@ -1,0 +1,25 @@
+<section class="articles">
+    <h2 class="aricles-heading">Latest Posts</h2>
+    <ul class="article-ul">
+        <% if (blogs.length > 0) { %>
+            <% blogs.forEach(blog => { %>
+                <li>
+                    <a href="/blog/<%= blog._id %>" class="aricle-wrapper">
+                        <span class="article-title"><%= blog.title %></span>
+                        <span class="article-date">Last Updated: <%= blog.createdAt.toDateString() %></span>
+                    </a>
+                    <div class="controls">
+                        <a href="/edit-blog/<%= blog._id %>" class="btn">Edit</a>
+
+                        <form action="/delete-blog/<%= blog._id %>?_method=DELETE" method="POST">
+                            <input type="submit" value="delete" class="btn">
+                        </form>
+                    </div>
+                </li>                    
+            <% }) %>
+
+        <% } else { %>
+            <h2>Nothing to see here</h2>
+        <% } %>
+    </ul>                  
+</section>
